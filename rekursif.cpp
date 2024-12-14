@@ -1,9 +1,8 @@
-#include <chrono>
+
 #include <iostream>
 #include <string>
 
 using namespace std;
-using namespace chrono; // untuk hitung waktu eksekusi
 
 const int nmax = 100;
 
@@ -83,24 +82,13 @@ int main() {
         cout << i + 1 << ". " << task[i].nama << ", Deadline: " << task[i].deadline << " hari" << endl;
     }
 
-    // Mencatat waktu sebelum eksekusi
-    auto start = high_resolution_clock::now();
-
     mergeSort(task, 0, n - 1);
-
-
-    // Mencatat waktu setelah eksekusi
-    auto stop = high_resolution_clock::now();
 
     cout << endl;
     cout << "Daftar Tugas Setelah Diurutkan Berdasarkan Deadline" << endl;
     for (int i = 0; i < n; i++) {
         cout << i + 1 << ". " << task[i].nama << ", Deadline: " << task[i].deadline << " hari" << endl;
     }
-
-    auto executionTime = duration_cast<nanoseconds>(stop - start);
-    cout << "Waktu eksekusi: " << executionTime.count() << " nanodetik" << endl;
-
 
     return 0;
 }
