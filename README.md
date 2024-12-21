@@ -11,5 +11,5 @@ Dengan analisis ini, kami berharap dapat mengidentifikasi situasi di mana pendek
 cocok, sehingga dapat diterapkan dalam penjadwalan aktivitas harian yang lebih efisien. 
 
 Anggota Kelompok:
-Rizka Ananda Pratama    103052300012
-Amanda Catleya Rahiu    103052300100
+(Rizka Ananda Pratama    103052300012)
+(Amanda Catleya Rahiu    103052300100)
