@@ -3,8 +3,9 @@
 #include <string>
 
 using namespace std;
+using namespace chrono; // untuk hitung waktu eksekusi
 
-const int nmax = 100;
+const int nmax = 130;
 
 struct tugas {
     string nama;
@@ -14,7 +15,7 @@ struct tugas {
 typedef struct tugas arrTugas[nmax];
 
 // untuk menggabungkan dua bagian array yang sudah urut
-void gabung(arrTugas tugasArr, tugas left[], tugas right[], int low, int mid, int high) {
+void gabung(arrTugas tugasArr, arrTugas left, arrTugas right, int low, int mid, int high) {
     int i = 0, j = 0, k = low; // indeks untuk left, right, dan tugasArr
     int nL = mid - low + 1; // panjang bagian kiri
     int nR = high - mid;    // panjang bagian kanan
@@ -72,7 +73,7 @@ int main() {
         {"Latihan Coding", 1},
         {"Kerjakan Tugas Akhir", 7},
         {"Belajar Pemrograman", 6},
-        {"Diskusi Kelompok", 8}
+        {"Diskusi Kelompok", 8},
     };
 
     int n = 8;
